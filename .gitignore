@@ -1,0 +1,20 @@
+# Global
+.DS_Store
+Thumbs.db
+*.log
+
+# Flutter (mobile frontend)
+mobile-frontend/.dart_tool/
+mobile-frontend/build/
+mobile-frontend/.pub/
+mobile-frontend/.pub-cache/
+mobile-frontend/.flutter-plugins
+mobile-frontend/.flutter-plugins-dependencies
+mobile-frontend/coverage/
+mobile-frontend/.idea/
+mobile-frontend/.vscode/
+mobile-frontend/*.iml
+
+# Node backend (future)
+backend/node_modules/
+backend/.env
