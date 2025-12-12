@@ -1,20 +1,19 @@
-# Global
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+coverage/
+
+# OS
 .DS_Store
 Thumbs.db
-*.log
 
-# Flutter (mobile frontend)
-mobile-frontend/.dart_tool/
-mobile-frontend/build/
-mobile-frontend/.pub/
-mobile-frontend/.pub-cache/
-mobile-frontend/.flutter-plugins
-mobile-frontend/.flutter-plugins-dependencies
-mobile-frontend/coverage/
-mobile-frontend/.idea/
-mobile-frontend/.vscode/
-mobile-frontend/*.iml
-
-# Node backend (future)
+# Node
 backend/node_modules/
 backend/.env
