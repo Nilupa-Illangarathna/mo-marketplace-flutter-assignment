@@ -34,7 +34,7 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
 ---
 
 ## Development Approach
-- Build step-by-step with small commits to reflect my knowladge.
+- Build step-by-step with small commits to reflect my knowladge. Some works will take a very less time due to I alrady have templated some implementations. 
 - Use **Provider** for state management since it is simple.
 - Keep UI modular with reusable widgets and clear separation of concerns.
 
