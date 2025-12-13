@@ -1,36 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'theme/app_theme.dart';
 import 'app_router.dart';
+import 'theme/app_theme.dart';
+import 'theme/theme_controller.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  // Force portrait
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
-
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  bool isDark = prefs.getBool('darkMode') ?? false;
-
-  runApp(MyApp(isDark: isDark));
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final bool isDark;
-  const MyApp({super.key, required this.isDark});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
-      themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
-      initialRoute: '/',
-      onGenerateRoute: AppRouter.generateRoute,
+    return ValueListenableBuilder<ThemeMode>(
+      valueListenable: ThemeController.themeMode,
+      builder: (_, mode, __) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'MO Marketplace',
+          theme: AppTheme.light,
+          darkTheme: AppTheme.dark,
+          themeMode: mode,
+          onGenerateRoute: AppRouter.generateRoute,
+        );
+      },
     );
   }
 }
