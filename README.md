@@ -43,7 +43,19 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
 ## Progress Log (will be updated)
 - [x] Repository initialized with Flutter mobile frontend
 - [x] .gitignore created and relevent init entries included to it.
-- [x] Readme.md markdown is added. Planing to document progress in it.
+- [x] `Readme.md` markdown is added. Planing to document progress in it.
+- [x] Introduced `dark/light Theme` **(Optional)**,  `Page Transition Animations`, `Router`
+  - Added optional Dark/Light theme support (implemented early for easier scalability)
+  - Centralized routing with animated page transitions
+  - pageTransitionsTheme property set at with easeInOut curve. (Check out lib/core/transitions/slide_transition.dart)
+- [x] At this stage I added 3 utilities, `API Caller`, `Global Configs`, `Global Errors`
+
+- [x] At the moment I have created the bridge between the node.js backend and the mobile app. I tested it with a simle UI. (lib\screens\demo\demo_page_one.dart)
+<br><br>
+`Now my main target is. developing the app while developing the Mock bakcend.`
+
+
+
 
 ---
 
