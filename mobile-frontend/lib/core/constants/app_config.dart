@@ -9,4 +9,6 @@ class AppConfig {
 
   // Navigation / transitions
   static const int pageTransitionMs = 200;
+
+  static const bool enableDrawer = true;
 }

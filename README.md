@@ -54,6 +54,8 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
 <br><br>
 `Now my main target is. developing the app while developing the Mock bakcend.`
 
+- [x] Introduced the application shell (Home layout, bottom navigation, drawer, and theme setup)
+  - Home navigation supports swipe gestures and animated transitions between tabs; bottom navigation and theme switching remain fully in sync
 
 
 
