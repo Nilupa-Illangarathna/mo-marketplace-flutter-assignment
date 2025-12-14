@@ -57,6 +57,11 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
 - [x] Introduced the application shell (Home layout, bottom navigation, drawer, and theme setup)
   - Home navigation supports swipe gestures and animated transitions between tabs; bottom navigation and theme switching remain fully in sync
 
+- [x] Added animated Splash Screen with persisted theme support
+  - Introduced a **splash screen** with fade + settle-down animation
+  - Theme preference is saved using SharedPreferences and restored on app launch
+  - Ensures consistent visual experience across app restarts
+
 
 
 ---
