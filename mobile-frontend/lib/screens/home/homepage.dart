@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../core/constants/app_config.dart';
-import '../../theme/theme_controller.dart';
+import '../../core/layout/header_matrics.dart';
+import '../../core/routes/home_tab_enums.dart';
+import '../../core/theme/theme_controller.dart';
 import '../../widgets/common/app_drawer.dart';
+import '../../widgets/common/search_bar.dart';
+import '../add_page/add_page.dart';
+import '../auth/login.dart';
+import '../categories/categories_page.dart';
+import '../chat_page/chat_page.dart';
+import '../dashboard/dashboard_screen.dart';
 import '../dummy/dummy_ui.dart';
 import 'custom_nav_bar.dart';
 
@@ -19,6 +27,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final tab = homeTabFromIndex(_selectedIndex);
     return WillPopScope(
       onWillPop: () async {
         return false; // Prevent going back
@@ -45,19 +54,36 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        body: PageView(
-          controller: _pageController,
-          onPageChanged: (index) {
-            setState(() => _selectedIndex = index);
-          },
-          children: const [
-            DummyPage(title: 'Home'),
-            DummyPage(title: 'Categories'),
-            DummyPage(title: 'Add'),
-            DummyPage(title: 'Chat'),
-            DummyPage(title: 'Login'),
+        body: Stack(
+          children: [
+            PageView(
+              controller: _pageController,
+              onPageChanged: (index) {
+                setState(() => _selectedIndex = index);
+              },
+              children: const [
+                DashboardPage(),
+                CategoriesPage(),
+                AddPage(),
+                ChatPage(),
+                LoginPage(),
+              ],
+            ),
+
+            // if (_selectedIndex == 0 || _selectedIndex == 1 || _selectedIndex == 3) // Instead I am using this enum
+            if (tab.showsSearchBar)
+              Positioned(
+                top: DashboardLayoutMetrics.searchBarTopOffset(),
+                left: 16,
+                right: 16,
+                child: HomeSearchBar(
+                  hintText: tab.searchHintText,
+                ),
+
+              ),
           ],
         ),
+
         drawer: const AppDrawer(),
         bottomNavigationBar: CustomBottomNavBar(
           currentIndex: _selectedIndex,

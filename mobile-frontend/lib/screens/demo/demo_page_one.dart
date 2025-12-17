@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../core/utils/api_caller.dart';
-import '../../theme/theme_controller.dart';
+import '../../core/theme/theme_controller.dart';
 
 class PageOne extends StatefulWidget {
   const PageOne({super.key});

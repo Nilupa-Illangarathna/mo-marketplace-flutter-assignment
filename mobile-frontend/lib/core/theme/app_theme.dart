@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/transitions/slide_transition.dart';
+import '../transitions/slide_transition.dart';
 
 class AppTheme {
   static const Color primaryRed = Color(0xFFD32F2F);

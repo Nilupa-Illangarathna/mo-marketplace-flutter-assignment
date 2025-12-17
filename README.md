@@ -58,11 +58,26 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
   - Home navigation supports swipe gestures and animated transitions between tabs; bottom navigation and theme switching remain fully in sync
 
 - [x] Added animated Splash Screen with persisted theme support
-  - Introduced a **splash screen** with fade + settle-down animation
+  - Introduced a **splash screen** with fade + settle-down animation (I used GEMINI to generate the two images necessory)
   - Theme preference is saved using SharedPreferences and restored on app launch
   - Ensures consistent visual experience across app restarts
 
+- 2025/12/17
+- [x] Core App Architecture & Structure
+  - Centralized configuration, theme, layout metrics, and routing logic to core
 
+- [x] Enum-Based Home Tab Control
+  - Introduced a `HomeTab` enum to represent all main tabs
+  - Removed hard-coded index checks in favor of enum-driven UI logic (commented and replaced)
+
+- [x] Search Bar
+  - Added a reusable `HomeSearchBar` component
+  - Search bar visibility is controlled via `HomeTab`
+  - Search hint text dynamically changes based on the active page usiogn Enum
+
+- [x] Screen & Header Standardization
+  - Implemented Dashboard, Categories, Add, Chat, and Login pages using `CustomScrollView` and `SliverToBoxAdapter`
+  - Added a reusable `PageHeader` for consistency
 
 ---
 
