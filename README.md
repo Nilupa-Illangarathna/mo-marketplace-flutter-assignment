@@ -58,7 +58,7 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
   - Home navigation supports swipe gestures and animated transitions between tabs; bottom navigation and theme switching remain fully in sync
 
 - [x] Added animated Splash Screen with persisted theme support
-  - Introduced a **splash screen** with fade + settle-down animation (I used GEMINI to generate the two images necessory)
+  - Introduced a **splash screen** with fade + settle-down animation (**Images generated using Gemini**)
   - Theme preference is saved using SharedPreferences and restored on app launch
   - Ensures consistent visual experience across app restarts
 
@@ -78,6 +78,14 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
 - [x] Screen & Header Standardization
   - Implemented Dashboard, Categories, Add, Chat, and Login pages using `CustomScrollView` and `SliverToBoxAdapter`
   - Added a reusable `PageHeader` for consistency
+
+- [x] Implemented App Drawer
+  - Added AI Generated light/dark background images
+  - Implemented expandable sections (Help, Policies, Guidelines, Delivery) 
+  - Limited child items per section for clean UX
+  - Included close button
+  - All items navigate to placeholder screens using a reusable DummyPage
+
 
 ---
 
