@@ -86,6 +86,12 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
   - Included close button
   - All items navigate to placeholder screens using a reusable DummyPage
 
+- [x] Local Mock Backend Product and Image API
+  - Added SQLite database for data
+  - Stored product images locally and exposed them via static image URLs
+  - Implemented product APIs with category-based filtering
+  - Returned relative image paths to allow client-side base URL handling
+
 
 ---
 
