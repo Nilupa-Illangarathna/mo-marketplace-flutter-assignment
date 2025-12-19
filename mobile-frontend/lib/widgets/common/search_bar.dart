@@ -15,7 +15,7 @@ class HomeSearchBar extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Material(
-      elevation: 1,
+      elevation: 0,
       shadowColor: Colors.black.withOpacity(0.15),
       borderRadius: BorderRadius.circular(30),
       child: TextField(

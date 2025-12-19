@@ -92,6 +92,12 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
   - Implemented product APIs with category-based filtering
   - Returned relative image paths to allow client-side base URL handling
 
+- [x] Dashboard Categories, theme updates 
+  - Introduced a category model and local mock categories 
+  - Added horizontal dashboard category list with navigation added 
+  - Refined AppBar styling with the theme
+  - Added a safe local rebuild script for repeatable Flutter clean builds
+
 
 ---
 

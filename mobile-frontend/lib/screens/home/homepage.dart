@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/app_config.dart';
 import '../../core/layout/header_matrics.dart';
 import '../../core/routes/home_tab_enums.dart';
 import '../../core/theme/theme_controller.dart';
@@ -10,7 +9,6 @@ import '../auth/login.dart';
 import '../categories/categories_page.dart';
 import '../chat_page/chat_page.dart';
 import '../dashboard/dashboard_screen.dart';
-import '../dummy/dummy_ui.dart';
 import 'custom_nav_bar.dart';
 
 
@@ -25,12 +23,20 @@ class _HomePageState extends State<HomePage> {
 
   bool _isAnimating = false;
 
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     final tab = homeTabFromIndex(_selectedIndex);
     return WillPopScope(
       onWillPop: () async {
-        return false; // Prevent going back
+        return false;
       },
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -44,11 +50,14 @@ class _HomePageState extends State<HomePage> {
 
                 return IconButton(
                   icon: Icon(
-                    isDark ? Icons.light_mode_outlined : Icons.dark_mode_outlined,
-                    color: isDark ? Colors.amber : Colors.black,
+                    isDark
+                        ? Icons.light_mode_outlined
+                        : Icons.dark_mode_outlined,
+                    color: isDark ? Colors.amber : null,
                   ),
                   onPressed: ThemeController.toggleTheme,
-                  tooltip: isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode',
+                  tooltip:
+                  isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode',
                 );
               },
             ),
@@ -61,7 +70,7 @@ class _HomePageState extends State<HomePage> {
               onPageChanged: (index) {
                 setState(() => _selectedIndex = index);
               },
-              children: const [
+              children: [
                 DashboardPage(),
                 CategoriesPage(),
                 AddPage(),

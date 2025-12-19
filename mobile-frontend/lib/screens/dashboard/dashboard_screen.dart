@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../core/layout/header_matrics.dart';
+import '../../data/mock/dashboard_categories.dart';
 import '../../widgets/common/header.dart';
+import '../../widgets/dashboard/dashboard_category_list.dart';
 
 class DashboardPage extends StatelessWidget {
-  const DashboardPage({super.key});
-
+  DashboardPage({super.key});
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -12,23 +13,17 @@ class DashboardPage extends StatelessWidget {
 
          SliverToBoxAdapter(
             child: SizedBox(
-              height: DashboardLayoutMetrics.searchBarTopOffset() + 24,
+              height: DashboardLayoutMetrics.searchBarTopOffset() + 74,
             )
         ),
 
-        const SliverToBoxAdapter(
-            child: const PageHeader(title: 'Welcome')
-        ),
-
-        const SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.all(16),
-            child: Text(
-              'Dashboard content TODO',
-              style: TextStyle(fontSize: 16),
-            ),
+        SliverToBoxAdapter(
+          child: DashboardCategoryList(
+            categories: dashboardCategories,
           ),
         ),
+
+
       ],
     );
   }

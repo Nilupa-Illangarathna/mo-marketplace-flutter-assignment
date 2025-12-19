@@ -12,9 +12,15 @@ class AppTheme {
     primaryColor: primaryRed,
 
     appBarTheme: const AppBarTheme(
-      backgroundColor: primaryRed,
-      foregroundColor: white,
+      backgroundColor: white,
+      foregroundColor: black,
       elevation: 0,
+      iconTheme: IconThemeData(color: black),
+      titleTextStyle: TextStyle(
+        color: black,
+        fontSize: 20,
+        fontWeight: FontWeight.w500,
+      ),
     ),
 
     textTheme: const TextTheme(
@@ -50,6 +56,12 @@ class AppTheme {
       backgroundColor: black,
       foregroundColor: white,
       elevation: 0,
+      iconTheme: IconThemeData(color: white),
+      titleTextStyle: TextStyle(
+        color: white,
+        fontSize: 20,
+        fontWeight: FontWeight.w500,
+      ),
     ),
 
     textTheme: const TextTheme(
