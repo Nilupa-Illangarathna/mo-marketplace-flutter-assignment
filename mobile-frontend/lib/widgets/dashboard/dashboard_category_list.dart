@@ -27,7 +27,7 @@ class DashboardCategoryList extends StatelessWidget {
               Navigator.pushNamed(context, category.route);
             },
             child: Container(
-              width: 85,
+              width: 68,
               margin: const EdgeInsets.symmetric(horizontal: 4),
               child: Column(
                 children: [
@@ -41,10 +41,11 @@ class DashboardCategoryList extends StatelessWidget {
                     child: Icon(
                       category.icon,
                       size: 32,
-                      color: theme.iconTheme.color,
+                      color: theme.iconTheme.color ??
+                          theme.colorScheme.onSurface,
                     ),
                   ),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   Text(
                     category.name,
                     textAlign: TextAlign.center,

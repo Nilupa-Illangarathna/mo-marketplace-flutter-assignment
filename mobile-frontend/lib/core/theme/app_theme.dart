@@ -11,6 +11,11 @@ class AppTheme {
     scaffoldBackgroundColor: white,
     primaryColor: primaryRed,
 
+    colorScheme: ColorScheme.light(
+      primary: primaryRed,
+      surfaceVariant: Colors.grey.shade50,
+    ),
+
     appBarTheme: const AppBarTheme(
       backgroundColor: white,
       foregroundColor: black,
@@ -51,6 +56,11 @@ class AppTheme {
     brightness: Brightness.dark,
     scaffoldBackgroundColor: black,
     primaryColor: primaryRed,
+
+    colorScheme: ColorScheme.dark(
+      primary: primaryRed,
+      surfaceVariant: Colors.grey.shade800,
+    ),
 
     appBarTheme: const AppBarTheme(
       backgroundColor: black,
