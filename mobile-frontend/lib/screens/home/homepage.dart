@@ -103,7 +103,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onItemTapped(int pageIndex) {
-    int currentPageIndex = _pageController.page!.round();
     int transitionTimeInMilisec = 300;
     if (!_isAnimating) {
       _isAnimating = true;

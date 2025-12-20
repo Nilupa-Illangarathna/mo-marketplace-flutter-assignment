@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../models/category_model.dart';
 import '../../models/sub_category_model.dart';
 import '../../core/utils/api_caller.dart';
+import '../../widgets/category/sub_category_tile.dart';
 
 class CategoryPage extends StatefulWidget {
   final CategoryModel category;
@@ -75,18 +76,8 @@ class _CategoryPageState extends State<CategoryPage> {
         separatorBuilder: (_, __) => const Divider(),
         itemBuilder: (context, index) {
           final sub = subCategories[index];
-
-          return ListTile(
-            leading: ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: Container(
-                width: 56,
-                height: 56,
-                color: theme.colorScheme.surfaceVariant,
-              ),
-            ),
-            title: Text(sub.name.toUpperCase()),
-            trailing: const Icon(Icons.chevron_right),
+          return SubCategoryTile(
+            subCategory: sub,
             onTap: () {
               Navigator.pushNamed(
                 context,
@@ -99,6 +90,7 @@ class _CategoryPageState extends State<CategoryPage> {
             },
           );
         },
+
       ),
     );
   }
