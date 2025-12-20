@@ -21,3 +21,8 @@ backend/.env
 # Database
 backend/data/
 
+# Code dumps
+mock.sh
+
+# SQLite database
+backend/data/*.db

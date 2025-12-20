@@ -15,15 +15,15 @@ class HomeSearchBar extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Material(
-      elevation: 0,
-      shadowColor: Colors.black.withOpacity(0.15),
+      elevation: 2,
+      shadowColor: Colors.black.withOpacity(0.95),
       borderRadius: BorderRadius.circular(30),
       child: TextField(
         decoration: InputDecoration(
           hintText: hintText,
           prefixIcon: const Icon(Icons.search),
           filled: true,
-          fillColor: theme.cardColor,
+          fillColor: theme.colorScheme.surfaceVariant,
           contentPadding: const EdgeInsets.symmetric(vertical: 14),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),

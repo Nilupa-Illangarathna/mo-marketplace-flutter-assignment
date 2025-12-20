@@ -19,3 +19,15 @@ exports.getByCategory = (category) =>
       }
     );
   });
+
+exports.getByCategoryAndSub = (category, subCategory) =>
+  new Promise((resolve, reject) => {
+    db.all(
+      `SELECT * FROM products WHERE category = ? AND sub_category = ? ORDER BY id ASC`,
+      [category, subCategory],
+      (err, rows) => {
+        if (err) return reject(err);
+        resolve(rows);
+      }
+    );
+  });

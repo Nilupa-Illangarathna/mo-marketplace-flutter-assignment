@@ -98,6 +98,15 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
   - Refined AppBar styling with the theme
   - Added a safe local rebuild script for repeatable Flutter clean builds
 
+- [x] Mock Backend Architecture & API Validation
+  - Structured product data with category > sub-category > product hierarchy
+  - Seeded realistic catalog data
+  - Exposed APIs for products, categories, and sub-categories with query filtering
+  - Served local product images via static routes with relative paths - need more to be added. Wil update newr to end of the development
+  - Fully validated all API endpoints using **curl commands**  woring fine
+  - Ensured database artifacts are excluded from version control via `.gitignore`
+  - Added a safe **backend reset shell script**
+    - *Script stops running Node processes, removes SQLite database, clears dependencies and cache*
 
 ---
 
