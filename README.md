@@ -146,3 +146,11 @@ cd mobile-frontend
   - *Home > Category > Sub-Category > Products > Product Details > Seller details(dummy page)*
 
 - All data is still **mock data** served by a **Node.js backedn**
+
+- [x] Finalizing the assignment requirements 
+  - **This delivers**
+  - Centralized backend routing logic inside `ApiCaller`
+  - Integrated product loading into Dashboard and Categories screens using real API flow (*Flutter -> Node.js -> DB -> Node.js -> Flutetr*)
+  - Added new dashboard sections: banner carousel, top products, and recently added products
+  - Refactored category and product UI into reusable widgets
+  - Added Flutter clean rebuild script (`clean_rebuild.sh`)
