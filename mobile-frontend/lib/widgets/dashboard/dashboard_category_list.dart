@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/category_model.dart';
+import '../../screens/categories/category_page.dart';
 
 class DashboardCategoryList extends StatelessWidget {
   final List<CategoryModel> categories;
@@ -24,7 +25,7 @@ class DashboardCategoryList extends StatelessWidget {
 
           return GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, category.route);
+              Navigator.pushNamed(context,'/category',arguments: category,);
             },
             child: Container(
               width: 68,

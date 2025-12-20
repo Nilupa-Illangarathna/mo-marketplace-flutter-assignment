@@ -5,36 +5,36 @@ const List<CategoryModel> dashboardCategories = [
   CategoryModel(
     name: 'Women\'s Fashion',
     icon: Icons.checkroom,
-    route: '/category/women-fashion',
+    slug: 'women',
   ),
   CategoryModel(
     name: 'Men\'s Fashion',
     icon: Icons.man,
-    route: '/category/men-fashion',
+    slug: 'men',
   ),
   CategoryModel(
     name: 'Babies & Kids',
     icon: Icons.child_care,
-    route: '/category/baby-kids',
+    slug: 'baby',
   ),
   CategoryModel(
     name: 'Furniture & Home Living',
     icon: Icons.chair_alt,
-    route: '/category/furniture-home',
+    slug: 'furniture',
   ),
   CategoryModel(
     name: 'Toys, Games & Books',
     icon: Icons.toys_outlined,
-    route: '/category/toys-games-books',
+    slug: 'toys_games_books',
   ),
   CategoryModel(
     name: 'Beauty & Personal Care',
     icon: Icons.face_retouching_natural,
-    route: '/category/beauty-care',
+    slug: 'beauty_care',
   ),
   CategoryModel(
     name: 'TV & Home Appliances',
     icon: Icons.tv,
-    route: '/category/home-appliances',
+    slug: 'home_appliances',
   ),
 ];

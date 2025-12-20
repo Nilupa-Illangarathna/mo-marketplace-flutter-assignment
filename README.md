@@ -5,8 +5,25 @@ This repository is my submission for the MO Marketplace Mobile Application Devel
 The goal is to deliver a clean, modern mobile UI with strong code structure, responsive design, and a scalable architecture.  
 **I’m developing the solution incrementally with small commits to reflect real-world engineering workflow.** Also per each step I will add an entry to this Readme.md so my ususal development pattern may reflect with a glance. 
 
----
 
+
+---
+<br><br>
+
+## Run the app
+
+```bash
+# Backend (reset + run)
+backend/reset_backend.sh
+backend/run.sh
+```
+```bash
+# Mobile app (Flutter clean rebuild)
+cd mobile-frontend
+.\clean_rebuild.ps1
+```
+
+<br><br>
 ## What I am going to include at the submittion(Scope) 
  
 ### Core Requirements
@@ -108,15 +125,24 @@ The goal is to deliver a clean, modern mobile UI with strong code structure, res
   - Added a safe **backend reset shell script**
     - *Script stops running Node processes, removes SQLite database, clears dependencies and cache*
 
----
 
-## Getting Started (Mobile)
-> **Will be expanded as features are implemented.**
+### Category -> Products Flow (Mock Backend Connected)
 
-### Run the app
-```bash
-cd mobile-frontend
-flutter pub get
-flutter run
-```
+- At this stage, the app now behaves like a **real marketplace app**, not a static demo. *Still development ongoing.*
 
+- I created a **mock backend** that provides:
+  - Categories (Women, Men, Furniture, etc.)
+  - Sub-categories under each category
+  - Products under each sub-category
+  - Product images served locally
+
+- These backend APIs are now **connected to the mobile app**. 
+
+- **When app runs backend logs data based on emulator clicks.**
+
+- From the **user’s point of view**, the flow is simple.
+
+- The overall flow now looks like:
+  - *Home > Category > Sub-Category > Products > Product Details > Seller details(dummy page)*
+
+- All data is still **mock data** served by a **Node.js backedn**
